@@ -66,7 +66,7 @@ variable "db_vcn" {
 # ---- Firewall Compute Shape Value
 variable "vm_compute_shape" {
   description = "Compute Shape"
-  default     = "VM.Standard2.4"
+  default     = "VM.Standard.E4.Flex"
 }
 
 # ---- Firewall VMs Display Name

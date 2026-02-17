@@ -8,6 +8,16 @@ For details of CIS Landing Zone, see [_CIS Landing Zone Enviornment_](https://gi
 
 We have validated **7.0.0** FortiGate Firewall for this architecture.
 
+## Compute Shapes
+
+All instances use AMD-based flexible shapes (`VM.Standard.E4.Flex`) by default, allowing configurable OCPUs and memory.
+
+| Instance | Shape | Default OCPUs |
+|----------|-------|---------------|
+| FortiGate Firewalls (HA) | VM.Standard.E4.Flex | 4 |
+
+You can customize OCPUs via the `vm_flex_shape_ocpus` variable.
+
 ## Prerequisites
 
 You should complete below pre-requisites before proceeding to next section:

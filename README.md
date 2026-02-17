@@ -14,9 +14,13 @@ This project contains multiple solutions. Each solution folder is structured in 
 - **solution-folder/build-orm**: Package cloudguard-ngfw template in OCI [Resource Manager Stack](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Tasks/managingstacksandjobs.htm) format.
 - **solution-folder/terraform-modules**: Contains a list of re-usable terraform modules (if any) for managing infrastructure resources like vcn, subnets, security, etc.
 
-## Current Solutions 
+## Compute Shapes
 
-This project includes below solutions supported: 
+All solutions use AMD-based flexible shapes (`VM.Standard.E4.Flex`) by default, allowing configurable OCPUs and memory. You can adjust the number of OCPUs via the `vm_flex_shape_ocpus` variable in each solution.
+
+## Current Solutions
+
+This project includes below solutions supported:
 
 - **FortiGate HA Cluster** : [ha-active-passive](use-cases/drg-ha-use-case) this allows end user to deploy FortiGate HA Cluster solutions in hub and spoke architecture. 
 

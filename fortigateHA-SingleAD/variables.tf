@@ -114,7 +114,7 @@ variable "vm_image_ocid" {
 }
 
 variable "instance_shape" {
-  default = "VM.Standard2.4"
+  default = "VM.Standard.E4.Flex"
 }
 
 # Choose an Availability Domain (1,2,3)

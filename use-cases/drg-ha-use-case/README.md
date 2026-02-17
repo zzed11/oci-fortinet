@@ -11,7 +11,18 @@ For details of the architecture, see [_Set up a hub-and-spoke network topology_]
 ## Validated Version Details
 
 We have validated 7.0.0_SR-IOV_Paravirtualized_Mode FortiGate Firewall for this architecture.
-- Chose **Create New VCN and Subnet** strategy. 
+- Chose **Create New VCN and Subnet** strategy.
+
+## Compute Shapes
+
+All instances use AMD-based flexible shapes (`VM.Standard.E4.Flex`) by default, allowing configurable OCPUs and memory.
+
+| Instance | Shape | Default OCPUs |
+|----------|-------|---------------|
+| FortiGate Firewalls (HA) | VM.Standard.E4.Flex | 4 |
+| Web/DB Spoke VMs | VM.Standard.E4.Flex | 4 |
+
+You can customize OCPUs via the `vm_flex_shape_ocpus` and `spoke_vm_flex_shape_ocpus` variables.
 
 ## Prerequisites
 

@@ -55,7 +55,7 @@ variable "vm_display_name_db" {
 
 variable "vm_compute_shape" {
   description = "Compute Shape"
-  default     = "VM.Standard2.4" //4 cores
+  default     = "VM.Standard.E4.Flex" //4 cores
 }
 
 variable "spoke_vm_compute_shape" {

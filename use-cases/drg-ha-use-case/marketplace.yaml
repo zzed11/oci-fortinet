@@ -208,7 +208,7 @@ variables:
 
   vm_compute_shape:
     type: oci:core:instanceshape:name
-    default: VM.Standard2.4
+    default: VM.Standard.E4.Flex
     title: Firewall Compute Shape
     required: true
     dependsOn:
@@ -217,7 +217,7 @@ variables:
 
   spoke_vm_compute_shape:
     type: oci:core:instanceshape:name
-    default: VM.Standard2.4
+    default: VM.Standard.E4.Flex
     title: Spoke Compute Shape
     required: true
     description: Compute Shape of Web/Db Tier VMs
@@ -226,9 +226,13 @@ variables:
 
   vm_flex_shape_ocpus:
     visible:
-      eq:
-        - vm_compute_shape
-        - "VM.Standard.E3.Flex"
+      or:
+        - eq:
+            - vm_compute_shape
+            - "VM.Standard.E3.Flex"
+        - eq:
+            - vm_compute_shape
+            - "VM.Standard.E4.Flex"
     type: integer
     default: 4
     title: Flex Shape OCPUs
@@ -238,9 +242,13 @@ variables:
 
   spoke_vm_flex_shape_ocpus:
     visible:
-      eq:
-        - spoke_vm_compute_shape
-        - "VM.Standard.E3.Flex"
+      or:
+        - eq:
+            - spoke_vm_compute_shape
+            - "VM.Standard.E3.Flex"
+        - eq:
+            - spoke_vm_compute_shape
+            - "VM.Standard.E4.Flex"
     type: integer
     default: 1
     title: Flex Shape OCPUs

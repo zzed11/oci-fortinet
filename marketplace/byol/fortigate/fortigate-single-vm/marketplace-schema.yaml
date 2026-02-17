@@ -303,7 +303,7 @@ variables:
 
   compute_shape:
     type: oci:core:instanceshape:name
-    default: "VM.Standard2.4"
+    default: "VM.Standard.E4.Flex"
     #type: string
     title: "Compute Shape"
     required: true
